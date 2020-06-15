@@ -1,0 +1,87 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(64, 65, 66);
+}
+
+h1{
+    /* text-align: center; */
+    color: rgb(87, 80, 80);
+    /* background-color: orange; */
+    color: rgb(223, 208, 208);
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    font-size: 3rem;
+    background-image: linear-gradient(to bottom,rgb(158, 7, 158),rgb(78, 11, 78));
+    margin: 7px;
+}
+
+.dodgerblue{
+    background-color: rgb(119, 7, 122);
+}
+
+table{
+    width: 500px;
+    /* border: 2px solid black; */
+    margin: auto;
+    outline: none;
+}
+
+tr{
+    height: 30px;
+    /* border: none; */
+}
+
+tr:nth-child(2n){
+    background-color:white;
+}
+
+tr:nth-child(2n+1){
+    background-color:rgb(173, 162, 162);
+}
+
+tr:hover{
+    background-color:grey;
+}
+
+td{
+    margin: 0;
+}
+
+#close a{
+    color: rgb(80, 77, 77);
+}
+
+#close a:hover{
+    text-shadow: 0px 0px 10px white;
+}
+
+form{
+
+    justify-content: center;
+}
+
+
+
+button{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px ;
+    border-radius: 5px;
+    /* background-color: orange; */
+    outline: none;
+    color: rgb(223, 208, 208);
+    text-transform: uppercase;
+    font-size: 1.0rem;
+}
+
+button:hover{
+    box-shadow: 0px 0px 10px  grey;
+    
+}
+
+
+

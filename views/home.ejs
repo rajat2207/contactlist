@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= title %> 
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    
+    </head>
+    <body>
+        <h1 ><i class="fas fa-address-book"></i>&nbsp; My Contact List</h1>
+
+        <form class="form-inline container-sm" action="/create-contact" method="POST">
+            <div class="input-group mb-3 m-3">
+                <div class="input-group-prepend dodgerblue">
+                    <span class="input-group-text"><i class="fas fa-user" ></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter Name" name="name" required>
+            </div>
+            
+
+            <div class="input-group mb-3 m-3">
+                <div class="input-group-prepend dodgerblue">
+                    <span class="input-group-text"><i class="fas fa-mobile" ></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter Number" name="number" required>
+            </div>
+            
+            <button type="submit" class="dodgerblue">Add Contact</button>
+          </form>
+
+        <table class="container-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th></th>
+                </tr>
+            <% for (let i of contact_List){%>
+                <tr id="contact_List">
+                    <td id="name"><%= i.name %></td> 
+                    <td id="number"><%= i.number %> </td>   
+                    <td id="close">
+                        <a href="/delete-contact/?id=<%= i._id %>"  >
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </td>  
+                </tr>  
+            <% } %> 
+        </table>
+        
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/home.js"></script>
+
+    </body>
+</html>
